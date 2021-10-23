@@ -19,3 +19,9 @@
 .item-body{
     margin-top: 20px;
 }
+
+.header-top{
+    padding: 15px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
