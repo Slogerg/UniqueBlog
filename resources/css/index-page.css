@@ -1,0 +1,42 @@
+.header-top{
+    padding: 15px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    margin-top: 10px;
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-card span{
+    max-height: 20px;
+}
+
+.header-card h4{
+    align-self: center;
+    text-align: center;
+}
+
+.navbar {
+    margin-bottom: 15px;
+}
+
+.post-date{
+    margin: 0;
+}
+
+.footer-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
