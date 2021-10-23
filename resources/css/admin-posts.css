@@ -1,0 +1,10 @@
+.header-top{
+    padding: 15px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-button{
+    display: flex;
+    justify-content: flex-end;
+}
