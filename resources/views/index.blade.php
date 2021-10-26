@@ -21,13 +21,6 @@
             href="../images/icons/favicon.ico"
             type="image/x-icon"
         />
-        <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="../../resources/css/index-page.css" />
         <title>Unique Blog</title>
     </head>
     <body>
@@ -109,34 +102,6 @@
         <main>
             <div class="container-xxl page-body">
                 <div class="row card-wrapper">
-                    <div class="col-xl-3 col-sm-6">
-                        <div class="card" style="width: 18rem">
-                            <img
-                                src="../images/marry.jpg"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <div class="header-card">
-                                    <h4 class="card-title">Card title</h4>
-                                    <span class="badge badge-primary"
-                                        >Primary</span
-                                    >
-                                </div>
-                                <p class="card-text">
-                                    Some quick example text to build on the card
-                                    title and make up the bulk of the card's
-                                    content.
-                                </p>
-                                <div class="footer-card">
-                                    <a href="#" class="btn btn-primary"
-                                        >Go somewhere</a
-                                    >
-                                    <small>27.05.2020</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-xl-3 col-sm-6">
                         <div class="card" style="width: 18rem">
                             <img
