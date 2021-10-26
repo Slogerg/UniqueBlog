@@ -4,7 +4,7 @@
         <div class="main">
             <div class="container-xxl">
                 <div class="add-button">
-                    <a href=""><i class="far fa-plus-square"></i></a>
+                    <a href="{{route('post.create')}}"><i class="far fa-plus-square"></i></a>
                 </div>
                 <table class="table">
                     <thead>
@@ -17,36 +17,18 @@
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($items as $item)
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>22.09.2019</td>
+                            <th scope="row">{{$item->id}}</th>
+                            <td>{{$item->title}}</td>
+                            <td>{{$item->user->name}}</td>
+                            <td>{{$item->created_at}}</td>
                             <td>
-                                <a href=""><i class="far fa-edit"></i></a>
-                                <a href=""><i class="far fa-trash-alt"></i></a>
+                                <a href="{{route('post.edit',$item->id)}}"><i class="far fa-edit"></i></a>
+{{--                                <a href="{{route('post.destroy',$item->id)}}"><i class="far fa-trash-alt"></i></a>--}}
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>22.09.2019</td>
-                            <td>
-                                <a href=""><i class="far fa-edit"></i></a>
-                                <a href=""><i class="far fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>22.09.2019</td>
-                            <td>
-                                <a href=""><i class="far fa-edit"></i></a>
-                                <a href=""><i class="far fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

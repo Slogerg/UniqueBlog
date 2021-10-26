@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,9 +14,15 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        $items = Post::all();
+        return view('admin-posts',compact('items'));
+
     }
 
+    public function show()
+    {
+
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -23,7 +30,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin-posts');
+        return view('admin-add-post');
     }
 
     /**
@@ -34,19 +41,18 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->input();
+//        if($request->file('image')) {
+//            $path = $request->file('image')->store('uploads', 'public');
+//
+//            $data['image'] = $path;
+//        }
+        $result = Post::create($data);
+        if ($result)
+            return redirect()->route('post.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -56,7 +62,8 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Post::where('id',$id)->first();
+        return view('admin-edit-post',compact('item'));
     }
 
     /**
@@ -68,7 +75,10 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $item = Post::where('id',$id)->first();
+        $data = $request->all();
+        $item->update($data);
+        return redirect()->route('post.index');
     }
 
     /**
@@ -79,6 +89,9 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Post::where('id',$id)->first()->destroy($id);
+        dd(1);
+        return redirect()->route('post.index');
+
     }
 }
